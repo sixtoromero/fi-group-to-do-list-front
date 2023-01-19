@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+# Primeros pasos
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Antes de iniciar la ejecución de la aplicación es conveniente lo siguiente:
+Ya el backend corriendo deben validar que url se aplica y con qué puerto se configura para que al momento de usar en el front este quede apuntando correctamente a nuestra API.
 
-## Available Scripts
+En la carpeta services de nuestra app está un JS llamado HttpClient.js como se muestra en la siguiente imagen:
 
-In the project directory, you can run:
+![image](https://user-images.githubusercontent.com/36134674/213512016-bd9a4532-c2c8-4a3d-9e8a-de58179ac355.png)
+
+Una vez validado todo procedemos a ejecutar la App con el siguiente comando.
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+viendo como resultado lo siguiente:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![image](https://user-images.githubusercontent.com/36134674/213512419-5177efd3-231a-4ad0-9ccc-e3359a53c57c.png)
 
-### `npm test`
+Para agregar una tarea solo basta con ingresar el texto de la tarea a asignar y clic en el botón asignar o presionando enter 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![image](https://user-images.githubusercontent.com/36134674/213512730-78081772-6979-4d9d-89d6-b550393115b5.png)
 
-### `npm run build`
+Para cambiar de estado solo basta con dar clic en el check para poner como completada y si quieren desmarcarla solo vuelven a dar clic en el check de la tarea completada y este nuevamente pasa a pendiente.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![image](https://user-images.githubusercontent.com/36134674/213513046-c3254ebf-78bd-4b22-80ca-81d4fbd15aca.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Para editar una tarea solo basta con dar clic en la descripción de la tarea y en el  modal que sale cambiar el contenido de la tarea y click en aceptar.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![image](https://user-images.githubusercontent.com/36134674/213513317-307ce168-c1a5-4489-8f1d-36136152d886.png)
 
-### `npm run eject`
+para eliminar basta solo con dar click en la X y saldrá una ventana de confirmación para aceptar o no la elminación del registro.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![image](https://user-images.githubusercontent.com/36134674/213513486-16edf51e-f4eb-43e9-8416-020c0a48d807.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Ventana de confirmación para eliminar el registro:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![image](https://user-images.githubusercontent.com/36134674/213513584-b999565f-b6b5-4d03-874a-6430da0fa566.png)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+quedo atento a sus comentarios.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
