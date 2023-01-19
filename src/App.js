@@ -34,7 +34,7 @@ export default function App() {
           xs={{ span: 10, offset: 1}}
           md={{span: 6, offset: 3}}
         >
-          <h2>TO DO LIST</h2>
+          <h2>TO DO LIST</h2>          
         </Col>
         <Col
           className="todo__list"
