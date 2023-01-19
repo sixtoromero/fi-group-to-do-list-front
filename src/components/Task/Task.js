@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
+import { Modal, Button } from "react-bootstrap";
+
 import { ReactComponent as Check} from "../../assets/images/check.svg";
 import { ReactComponent as Delete} from "../../assets/images/delete.svg";
 import "./Task.scss";
@@ -7,6 +9,10 @@ import { updateTask, deleteTask } from '../../actions/TaskAction';
 export default function Task(props) {
     const { task, setReloadTask } = props;    
     
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
     const completeTask = () => {        
         const model = {
             id: task.Id,
@@ -21,13 +27,21 @@ export default function Task(props) {
         });
     }
 
-    const removeTask = () => {
+    const confirmRemove = ()=>{
+        setShow(true);
+    }
+
+    const removeTask = () => {        
+        
+        handleClose();
+
         deleteTask(task.Id).then(response => {            
             if (response.data.IsSuccess){                
                 setReloadTask(true);
             }
         });
     }
+    
 
     return (
         <div className="task">
@@ -40,8 +54,24 @@ export default function Task(props) {
                 {task?.NameTask}
             </div>
             <div>
-                <Delete onClick={removeTask} />
+                <Delete onClick={confirmRemove} />
             </div>
+
+            <Modal show={show} onHide={handleClose}>
+                <Modal.Header closeButton>
+                <Modal.Title>Eliminar tarea</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>Está seguro de eliminar el registro?</Modal.Body>
+                <Modal.Footer>
+                <Button variant="secondary" onClick={handleClose}>
+                    Cancelar
+                </Button>
+                <Button variant="danger" onClick={removeTask}>
+                    Aceptar
+                </Button>
+                </Modal.Footer>
+            </Modal>            
         </div>
+        
     );
 }

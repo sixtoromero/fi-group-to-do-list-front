@@ -12,7 +12,7 @@ export default function App() {
 
   const [tasks, setTask] = useState(null);
   const [reloadTask, setRealoadTask] = useState(false);
-  
+
   useEffect(() => {
     getAllTask().then(response => {      
       const arrayTasks = [];
@@ -34,7 +34,7 @@ export default function App() {
           xs={{ span: 10, offset: 1}}
           md={{span: 6, offset: 3}}
         >
-          <h2>Today</h2>
+          <h2>TO DO LIST</h2>
         </Col>
         <Col
           className="todo__list"
@@ -58,6 +58,9 @@ export default function App() {
             <AddTask setReloadTask={setRealoadTask} />
         </Col>
       </Row>
+
     </Container>
+
+    
   );
 }
